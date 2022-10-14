@@ -28,7 +28,7 @@ object Field {
         println(mesh(size,size))
         
     }
-    
+    //grid construction
     val eol = sys.props("line.separator")
     def bar(cellWidth: Int = 5, cellNum: Int = 5): String = (("+" + "-" * 3) * cellNum) + "+" + eol
     def cells(cellWidth: Int=5, cellNum: Int=5): String = ("|" + " " * 3) * cellNum + "|" + eol
