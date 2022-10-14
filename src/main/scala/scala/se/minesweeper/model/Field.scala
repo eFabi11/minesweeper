@@ -21,6 +21,7 @@ object Field {
         Person(name,age)
     }
 
+    // input number and shows grid
     def showGrid()= {
         println("Enter size of grid: ")
         val size = scala.io.StdIn.readInt()
