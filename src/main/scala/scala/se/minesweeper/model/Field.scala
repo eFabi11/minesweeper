@@ -1,0 +1,42 @@
+package se.minesweeper.model
+
+import scala.io.StdIn._
+
+//case class Field()
+
+object Field {
+    def main(args:Array[String]) = {
+        println("Welcome to Minesweeper \n")
+        val salutation = "Hi " + signUp(args)
+        println(salutation)
+        showGrid()
+    }
+
+    def signUp(playerNames:Array[String]):Person = {
+        val name = if (playerNames.length > 0)
+            playerNames.head
+        else
+            readLine("Dude enter your name: ")
+        val age = 33
+        Person(name,age)
+    }
+
+    def showGrid()= {
+        println("Enter size of grid: ")
+        val size = scala.io.StdIn.readInt()
+        
+        println(mesh(size,size))
+        
+    }
+    
+    val eol = sys.props("line.separator")
+    def bar(cellWidth: Int = 5, cellNum: Int = 5): String = (("+" + "-" * 3) * cellNum) + "+" + eol
+    def cells(cellWidth: Int=5, cellNum: Int=5): String = ("|" + " " * 3) * cellNum + "|" + eol
+    def mesh(cellWidth: Int=5, cellNum: Int=5): String =(bar(cellWidth, cellNum) + cells(cellWidth, cellNum)) * cellNum + bar(cellWidth, cellNum)
+
+
+}
+
+case class Person(name: String, age: Int) {
+    override def toString = name + "("+age+")"
+}
