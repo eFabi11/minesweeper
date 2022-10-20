@@ -11,7 +11,7 @@ object Field {
         println(salutation)
         showGrid()
     }
-    // make a conflict -> do it --- dooo it :D
+    // enter players name
     def signUp(playerNames:Array[String]):Person = {
         val name = if (playerNames.length > 0)
             playerNames.head
