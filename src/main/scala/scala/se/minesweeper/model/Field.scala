@@ -11,7 +11,7 @@ object Field {
         println(salutation)
         showGrid()
     }
-    // enter players name
+    // test text bla blubb
     def signUp(playerNames:Array[String]):Person = {
         val name = if (playerNames.length > 0)
             playerNames.head
