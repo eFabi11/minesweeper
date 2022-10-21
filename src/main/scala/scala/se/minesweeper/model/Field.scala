@@ -11,7 +11,7 @@ object Field {
         println(salutation)
         showGrid()
     }
-    // servus
+    // enters player name
     def signUp(playerNames:Array[String]):Person = {
         val name = if (playerNames.length > 0)
             playerNames.head
@@ -21,6 +21,7 @@ object Field {
         Person(name,age)
     }
 
+    // test branch features creation
     // input number and shows grid
     def showGrid()= {
         println("Enter size of grid: ")
