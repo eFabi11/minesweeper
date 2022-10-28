@@ -5,12 +5,12 @@ import scala.io.StdIn._
 //case class Field()
 
 object Field {
-/*     def main(args:Array[String]) = {
+    def main(args:Array[String]) = {
         println("Welcome to Minesweeper \n")
         val salutation = "Hi " + signUp(args)
         println(salutation)
         showGrid()
-    } */
+    }
     // enters player name
     def signUp(playerNames:Array[String]):Person = {
         val name = if (playerNames.length > 0)
@@ -24,10 +24,10 @@ object Field {
     // test branch features creation
     // input number and shows grid
     def showGrid()= {
-        println("Enter size of grid: ")
-        val size = scala.io.StdIn.readInt()
-        
-        println(mesh(size,size)) 
+        //println("Enter size of grid: ")
+        //val size = scala.io.StdIn.readInt()
+
+        //intln(mesh(size,size)) 
         println(mesh(3,3))
     }
     //grid construction
