@@ -1,5 +1,5 @@
-package se.de.htwg.minesweeper.model
-import se.de.htwg.minesweeper.model.Field
+package de.htwg.se.minesweeper.model
+import de.htwg.se.minesweeper.model.Field
 
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatest.matchers.should.Matchers._
@@ -7,21 +7,21 @@ import org.scalatest.matchers.should.Matchers._
 class FieldSpec extends AnyWordSpec{
     "FieldSpec" should {
         "have a bar as String of form '+---+---+---+'" in {
-            bar() should be("+---+---+---+" + eol)
+            Field.bar() should be("+---+---+---+" + Field.eol)
         }
         "have a scalable bar" in {
-            bar(1, 1) should be("+---+" + eol)
-            bar(2, 2) should be("+---+---+" + eol)
-            bar(3, 3) should be("+---+---+---+" + eol)
+            Field.bar(1, 1) should be("+---+" + Field.eol)
+            Field.bar(2, 2) should be("+---+---+" + Field.eol)
+            Field.bar(3, 3) should be("+---+---+---+" + Field.eol)
         }
         "have cells as String of form '|   |   |   |'" in {
-            cells() should be("|   |   |   |" + eol)
+            Field.cells() should be("|   |   |   |" + Field.eol)
 
         }
         "have scalable cells" in {
-            cells(1, 1) should be("|   |" + eol)
-            cells(2, 2) should be("|   |   |" + eol)
-            cells(3, 3) should be("|   |   |   |" + eol)
+            Field.cells(1, 1) should be("|   |" + Field.eol)
+            Field.cells(2, 2) should be("|   |   |" + Field.eol)
+            Field.cells(3, 3) should be("|   |   |   |" + Field.eol)
         }
 
     }
