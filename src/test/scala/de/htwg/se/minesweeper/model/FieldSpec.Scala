@@ -1,5 +1,5 @@
-package se.minesweeper.model
-import model.Field
+package se.de.htwg.minesweeper.model
+import se.de.htwg.minesweeper.model.Field
 
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatest.matchers.should.Matchers._
