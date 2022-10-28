@@ -1,4 +1,5 @@
 package se.minesweeper.model
+import model.Field
 
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatest.matchers.should.Matchers._
