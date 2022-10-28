@@ -23,6 +23,7 @@ class FieldSpec extends AnyWordSpec{
             Field.cells(2, 2) should be("|   |   |" + Field.eol)
             Field.cells(3, 3) should be("|   |   |   |" + Field.eol)
         }
+        
 
     }
 }
