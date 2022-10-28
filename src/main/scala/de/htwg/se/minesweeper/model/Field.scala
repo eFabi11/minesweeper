@@ -24,16 +24,18 @@ object Field {
     // test branch features creation
     // input number and shows grid
     def showGrid()= {
-        println("Enter size of grid: ")
+/*         println("Enter size of grid: ")
         val size = scala.io.StdIn.readInt()
         
-        println(mesh(size,size))
-        
+        println(mesh(size,size)) */
+        println(mesh(3,3))
     }
     //grid construction
     val eol = sys.props("line.separator")
     def bar(cellWidth: Int = 5, cellNum: Int = 5): String = (("+" + "-" * 3) * cellNum) + "+" + eol
+    def bar(): String = (("+" + "-" * 3) * 3) + "+" + eol
     def cells(cellWidth: Int=5, cellNum: Int=5): String = ("|" + " " * 3) * cellNum + "|" + eol
+    def cells(): String = ("|" + " " * 3) * 3 + "|" + eol
     def mesh(cellWidth: Int=5, cellNum: Int=5): String =(bar(cellWidth, cellNum) + cells(cellWidth, cellNum)) * cellNum + bar(cellWidth, cellNum)
 
 
