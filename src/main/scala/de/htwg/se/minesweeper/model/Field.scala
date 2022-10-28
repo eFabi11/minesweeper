@@ -1,4 +1,4 @@
-package se.minesweeper.model
+package model
 
 import scala.io.StdIn._
 
