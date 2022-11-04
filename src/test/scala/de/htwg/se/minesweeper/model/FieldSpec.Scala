@@ -23,6 +23,20 @@ class FieldSpec extends AnyWordSpec{
             Field.cells(2, 2) should be("|   |   |" + Field.eol)
             Field.cells(3, 3) should be("|   |   |   |" + Field.eol)
         }
+        "have scalable mesh" in {
+            Field.mesh() should be("+---+---+---+" + Field.eol + "|   |   |   |" + Field.eol + "+---+---+---+" + Field.eol +
+            "|   |   |   |" + Field.eol + "+---+---+---+" + Field.eol + "|   |   |   |" + Field.eol + "+---+---+---+" + Field.eol)
+            Field.mesh(3,3) should be("+---+---+---+" + Field.eol + "|   |   |   |" + Field.eol + "+---+---+---+" + Field.eol +
+            "|   |   |   |" + Field.eol + "+---+---+---+" + Field.eol + "|   |   |   |" + Field.eol + "+---+---+---+" + Field.eol)
+
+        }
+        "have any Person name" in {
+            Field.signUp(Array("Steve")).toString should be ("Steve(33)")
+        }
+        "have scalabe grid" in {
+            Field.showGrid() should be("+---+---+---+" + Field.eol + "|   |   |   |" + Field.eol + "+---+---+---+" + Field.eol +
+            "|   |   |   |" + Field.eol + "+---+---+---+" + Field.eol + "|   |   |   |" + Field.eol + "+---+---+---+")
+        }
+
     }
-    
 }
