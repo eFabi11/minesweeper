@@ -30,6 +30,17 @@ object Field {
         println(mesh(size,size))
         
     }
+    def levelChoose(){
+        printl("Enter the level you want to play 1,2 or 3: ")
+        val level = scala.io.StdIn.readInt()
+
+        level match{
+            case 1
+            case 2
+            case 3 
+        }
+
+    }
     //grid construction
     val eol = sys.props("line.separator")
     def bar(cellWidth: Int = 5, cellNum: Int = 5): String = (("+" + "-" * 3) * cellNum) + "+" + eol
