@@ -1,11 +1,13 @@
-package de.htwg.se.tictactoe.model
+package de.htwg.se.minesweeper.model
+import model.Field
+
 
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatest.matchers.should.Matchers._
 
 class FieldSpec extends AnyWordSpec {
-  "A TicTacToe Field" when {
-    "filled with X" should {
+  "A Minesweeper Field" when {
+    "filled with F" should {
       val field1 = new Field(1, Marker.X)
       val field2 = new Field(2, Marker.X)
       val field3 = new Field(3, Marker.X)
@@ -18,20 +20,20 @@ class FieldSpec extends AnyWordSpec {
         field2.bar(2, 1) should be("+--+" + eol)
         field2.bar(1, 2) should be("+-+-+" + eol)
       }
-      "have cells as String of form '| X | X | X |'" in {
-        field3.cells(0) should be("| X | X | X |" + eol)
+      "have cells as String of form '| F | F | F |'" in {
+        field3.cells(0) should be("| F | F | F |" + eol)
       }
       "have scalable cells" in {
-        field1.cells(0, 1) should be("|X|" + eol)
-        field2.cells(0, 1) should be("|X|X|" + eol)
-        field1.cells(0, 3) should be("| X |" + eol)
+        field1.cells(0, 1) should be("|F|" + eol)
+        field2.cells(0, 1) should be("|F|F|" + eol)
+        field1.cells(0, 3) should be("| F |" + eol)
       }
       "have a mesh in the form " +
         "+-+" +
-        "|X|" +
+        "|F|" +
         "+-+" in {
-          field1.mesh(1) should be("+-+" + eol + "|X|" + eol + "+-+" + eol)
-          field2.mesh(1) should be("+-+-+" + eol + "|X|X|" + eol + "+-+-+" + eol + "|X|X|" + eol + "+-+-+" + eol)
+          field1.mesh(1) should be("+-+" + eol + "|F|" + eol + "+-+" + eol)
+          field2.mesh(1) should be("+-+-+" + eol + "|F|F|" + eol + "+-+-+" + eol + "|F|F|" + eol + "+-+-+" + eol)
         }
     }
     "filled with O" should {
@@ -77,7 +79,7 @@ class FieldSpec extends AnyWordSpec {
       }
       "have an X and O after two moves" in {
         field.put(Marker.X, 0, 0).put(Marker.O, 1, 1).toString should be(("""#+---+---+---+
-          #| X |   |   |
+          #| F |   |   |
           #+---+---+---+
           #|   | O |   |
           #+---+---+---+
