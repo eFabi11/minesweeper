@@ -1,5 +1,4 @@
-package de.htwg.se.minesweeper.model
-import htwg.se.minesweeper.model.Field
+package se.minesweeper.model
 
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatest.matchers.should.Matchers._
@@ -7,9 +6,9 @@ import org.scalatest.matchers.should.Matchers._
 class FieldSpec extends AnyWordSpec {
   "A Minesweeper Field" when {
     "filled with F" should {
-      val field1 = new Field(1, Marker.X)
-      val field2 = new Field(2, Marker.X)
-      val field3 = new Field(3, Marker.X)
+      val field1 = new Field(1, Marker.F)
+      val field2 = new Field(2, Marker.F)
+      val field3 = new Field(3, Marker.F)
       val eol = sys.props("line.separator")
       "have a bar as String of form '+---+---+---+'" in {
         field3.bar() should be("+---+---+---+" + eol)
@@ -77,7 +76,7 @@ class FieldSpec extends AnyWordSpec {
           #""").stripMargin('#'))
       }
       "have an X and O after two moves" in {
-        field.put(Marker.X, 0, 0).put(Marker.O, 1, 1).toString should be(("""#+---+---+---+
+        field.put(Marker.F, 0, 0).put(Marker.O, 1, 1).toString should be(("""#+---+---+---+
           #| F |   |   |
           #+---+---+---+
           #|   | O |   |
