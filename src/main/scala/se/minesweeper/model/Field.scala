@@ -1,7 +1,5 @@
 package se.minesweeper.model
 
-import scala.io.StdIn._
-
 case class Field(matrix: Matrix[Marker]):
   def this(size: Int, filling: Marker) = this(new Matrix(size, filling))
   val size = matrix.size
