@@ -9,6 +9,7 @@ import scala.io.StdIn._
 
 @main def run: Unit =
   println("Welcome to Minesweeper")
+  //val field = new Field(6, Marker.Empty)
   val field = new Field(6, Marker.Empty)
   val controller = Controller(field)
   val tui = TUI(controller)

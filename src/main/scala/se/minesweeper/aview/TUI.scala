@@ -14,7 +14,17 @@ class TUI(controller: Controller) extends Observer:
 
     override def update = println(controller.field.toString)
         
+  //println(field.toString)
+  //getInputAndPrintLoop(field)
 
+//def getInputAndPrintLoop(field: Field): Unit =
+  //val input = readLine
+  //parseInput(input) match
+    //case None => field
+    //case Some(newfield) =>
+      //println(newfield)
+      //getInputAndPrintLoop(newfield)
+   
     def getInputAndPrintLoop(): Unit =
         val input = readLine
         input match
@@ -26,9 +36,19 @@ class TUI(controller: Controller) extends Observer:
                     case 'f' => Marker.F
                     case 'O' => Marker.O
                     case 'o' => Marker.O
+                    case 's' => Marker.Empty
                     case _   => Marker.Empty
                 val x = chars(1).toString.toInt
                 val y = chars(2).toString.toInt
+                val ran = new scala.util.Random
+                val randX = ran.nextInt(5)
+                val randY = ran.nextInt(5)
+                val mark = Marker.M
+                //controller.put(mark, randX, randY)
+                controller.put(mark, 3, 4)
+                controller.put(mark, 1, 1)
+                controller.put(mark, 5, 5)
+                controller.put(mark, 1, 4)
                 controller.put(marker, x, y)
                 println(controller.toString)
                 getInputAndPrintLoop()

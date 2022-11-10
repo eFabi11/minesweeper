@@ -10,4 +10,5 @@ case class Field(matrix: Matrix[Marker]):
   def mesh(cellWidth: Int = 3) =
     (0 until size).map(cells(_, cellWidth)).mkString(bar(cellWidth, size), bar(cellWidth, size), bar(cellWidth, size))
   override def toString = mesh()
+  def generateRandomMines(marker: Marker, randX: Int, randY: Int) = put(marker, randX, randY)
   def put(marker: Marker, x: Int, y: Int) = copy(matrix.replaceCell(x, y, marker))
