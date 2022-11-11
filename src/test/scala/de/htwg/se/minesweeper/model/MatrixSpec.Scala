@@ -29,6 +29,8 @@ class MatrixSpec extends AnyWordSpec {
       "be filled using fill operation" in {
         val returnedMatrix = matrix.fill("f")
         returnedMatrix.cell(0, 0) should be("f")
+        val returnedMatrix2 = matrix.fill("o")
+        returnedMatrix2.cell(0, 0) should be("o")
       }
     }
   }

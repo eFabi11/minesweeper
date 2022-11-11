@@ -13,6 +13,11 @@ class FieldSpec extends AnyWordSpec {
       "have a bar as String of form '+---+---+---+'" in {
         field3.bar() should be("+---+---+---+" + eol)
       }
+      "have a scalable bar" in {
+        field1.bar(1, 1) should be("+---+" + eol)
+        field1.bar(2, 2) should be("+---+---+" + eol)
+        field1.bar(3, 3) should be("+---+---+---+" + eol)
+        }
       "have cells as String of form '| F | F | F |'" in {
         field3.cells(0) should be("| F | F | F |" + eol)
       }
@@ -45,6 +50,7 @@ class FieldSpec extends AnyWordSpec {
         "|O|" +
         "+-+" in {
         }
+
     }
     "filled with Empty" should {
       var field = new Field(3, Marker.Empty)
