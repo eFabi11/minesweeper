@@ -8,7 +8,7 @@ import se.minesweeper.model.Field
 import scala.io.StdIn._
 
 @main def run: Unit =
-  println("Welcome to Minesweeper")
+  println("Welcome to Minesweeper: \npress s00 to start")
   //val field = new Field(6, Marker.Empty)
   val field = new Field(6, Marker.Empty)
   val controller = Controller(field)
