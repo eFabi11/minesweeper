@@ -50,7 +50,7 @@ class TUI(controller: Controller) extends Observer:
                 controller.put(mark, 5, 5)
                 controller.put(mark, 1, 4)
                 controller.put(marker, x, y)
-                println(controller.toString)
+                //println(controller.toString)
                 getInputAndPrintLoop()
             }
         
