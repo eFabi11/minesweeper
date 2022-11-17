@@ -1,6 +1,5 @@
 package se.minesweeper.model
 
-//new build
 case class Field(matrix: Matrix[Marker]):
   def this(size: Int, filling: Marker) = this(new Matrix(size, filling))
   val size = matrix.size

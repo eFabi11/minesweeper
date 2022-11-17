@@ -5,4 +5,5 @@ enum Marker(stringRepresentation: String):
   case F extends Marker("F")
   case O extends Marker("O") 
   case M extends Marker("*")
+  //case Close extends Marker("#")
   case Empty extends Marker(" ")

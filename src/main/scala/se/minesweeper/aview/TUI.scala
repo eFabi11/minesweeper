@@ -1,6 +1,7 @@
 package se.minesweeper
 package aview
 
+//test comment
 import controller.Controller
 import model.Marker
 import scala.io.StdIn.readLine
