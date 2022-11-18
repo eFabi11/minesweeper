@@ -9,4 +9,4 @@ For more information on the sbt-dotty plugin, see the
 test
 
 
-[![Coverage Status](https://coveralls.io/repos/github/eFabi11/minesweeper/badge.svg)](https://coveralls.io/github/eFabi11/minesweeper)
+[![Coverage Status](https://coveralls.io/repos/github/eFabi11/minesweeper/badge.svg?branch=main)](https://coveralls.io/github/eFabi11/minesweeper)
