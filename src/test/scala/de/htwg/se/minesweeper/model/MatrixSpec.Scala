@@ -1,8 +1,7 @@
-package se.minesweeper.model
+package de.htwg.se.minesweeper.model
 
-import de.htwg.se.minesweeper.model.Matrix
+import org.scalatest.matchers.should.Matchers._
 import org.scalatest.wordspec.AnyWordSpec
-import org.scalatest.matchers.should.Matchers.*
 
 class MatrixSpec extends AnyWordSpec {
   "A Matrix is a tailor-made immutable data type that contains a two-dimentional Vector of something. A Matrix" when {
@@ -15,7 +14,6 @@ class MatrixSpec extends AnyWordSpec {
         val testMatrix = Matrix(Vector(Vector("f")))
         testMatrix.size should be(1)
       }
-
     }
     "filled" should {
       val matrix = new Matrix[String](2, "f")
@@ -30,10 +28,7 @@ class MatrixSpec extends AnyWordSpec {
       "be filled using fill operation" in {
         val returnedMatrix = matrix.fill("f")
         returnedMatrix.cell(0, 0) should be("f")
-        val returnedMatrix2 = matrix.fill("o")
-        returnedMatrix2.cell(0, 0) should be("o")
       }
     }
   }
-
 }

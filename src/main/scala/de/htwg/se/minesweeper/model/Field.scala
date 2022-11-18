@@ -5,10 +5,11 @@ case class Field(matrix: Matrix[Marker]):
   val size = matrix.size
   val eol = sys.props("line.separator")
   def bar(cellWidth: Int = 3, cellNum: Int = 3): String = (("+" + "-" * 3) * cellNum) + "+" + eol
-  def cells(row: Int, cellWidth: Int = 3) =
+  def cells(row: Int, cellWidth: Int = 3): String =
     matrix.row(row).map(_.toString).map(" " * ((cellWidth - 1) / 2) + _ + " " * ((cellWidth - 1) / 2)).mkString("|", "|", "|") + eol
-  def mesh(cellWidth: Int = 3) =
+  def mesh(cellWidth: Int = 3): String =
     (0 until size).map(cells(_, cellWidth)).mkString(bar(cellWidth, size), bar(cellWidth, size), bar(cellWidth, size))
   override def toString = mesh()
   //def generateRandomMines(marker: Marker, randX: Int, randY: Int) = put(marker, randX, randY)
   def put(marker: Marker, x: Int, y: Int) = copy(matrix.replaceCell(x, y, marker))
+  def get(x: Int, y:Int): Marker = matrix.cell(x, y)
