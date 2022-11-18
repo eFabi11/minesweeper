@@ -1,4 +1,4 @@
-package se.minesweeper.util
+package de.htwg.se.minesweeper.util
 
 trait Observer:
   def update: Unit

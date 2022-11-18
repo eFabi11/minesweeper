@@ -1,4 +1,4 @@
-package se.minesweeper.model
+package de.htwg.se.minesweeper.model
 
 enum Marker(stringRepresentation: String):
   override def toString = stringRepresentation

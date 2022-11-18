@@ -1,9 +1,7 @@
-package se.minesweeper
-package controller
+package de.htwg.se.minesweeper.controller
 
-import model.Field
-import model.Marker
-import util.Observable
+import de.htwg.se.minesweeper.model.{Field, Marker}
+import de.htwg.se.minesweeper.util.Observable
 
 
 case class Controller(var field: Field) extends Observable:
