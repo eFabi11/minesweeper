@@ -1,4 +1,4 @@
-package se.minesweeper.model
+package de.htwg.se.minesweeper.model
 
 case class Field(matrix: Matrix[Marker]):
   def this(size: Int, filling: Marker) = this(new Matrix(size, filling))

@@ -1,11 +1,11 @@
-package se.minesweeper
+package de.htwg.se.minesweeper
 package aview
 
 //test comment
 import controller.Controller
+import util.Observer
 import model.Marker
 import scala.io.StdIn.readLine
-import util.Observer
 
 class TUI(controller: Controller) extends Observer:
     controller.add(this)
