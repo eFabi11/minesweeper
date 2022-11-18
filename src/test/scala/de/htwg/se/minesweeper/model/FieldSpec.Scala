@@ -13,11 +13,12 @@ class FieldSpec extends AnyWordSpec {
       "have a bar as String of form '+---+---+---+'" in {
         field3.bar() should be("+---+---+---+" + eol)
       }
-      /*"have a scalable bar" in {
-        field1.bar(1, 1) should be("+-+" + eol)
-        field2.bar(2, 1) should be("+--+" + eol)
-        field2.bar(1, 2) should be("+-+-+" + eol)
-      }*/
+      "have a scalable bar" in {
+        field1.bar() should be("+---+---+---+" + eol)
+        //field1.bar(1, 1) should be("+-+" + eol)
+        //field2.bar(2, 1) should be("+--+" + eol)
+        //field2.bar(1, 2) should be("+-+-+" + eol)
+      }
       "have cells as String of form '| F | F | F |'" in {
         field3.cells(0) should be("| F | F | F |" + eol)
       }
