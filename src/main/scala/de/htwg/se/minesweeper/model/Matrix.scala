@@ -1,5 +1,4 @@
-package se.minesweeper.model
-
+package de.htwg.se.minesweeper.model
 
 //new test
 case class Matrix[T](rows: Vector[Vector[T]]):

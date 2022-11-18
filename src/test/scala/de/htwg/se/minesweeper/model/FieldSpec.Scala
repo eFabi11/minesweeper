@@ -1,7 +1,8 @@
 package se.minesweeper.model
 
+import de.htwg.se.minesweeper.model.Field
 import org.scalatest.wordspec.AnyWordSpec
-import org.scalatest.matchers.should.Matchers._
+import org.scalatest.matchers.should.Matchers.*
 
 class FieldSpec extends AnyWordSpec {
   "A Minesweeper Field" when {
