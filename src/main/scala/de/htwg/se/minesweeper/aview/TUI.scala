@@ -32,6 +32,8 @@ class TUI(controller: Controller) extends Observer:
       case None =>
       case Some(move) => controller.doAndPublish(controller.put, move)
     getInputAndPrintLoop()
+
+    // just put some comment in to test CI
         
         
         
