@@ -15,4 +15,4 @@ test
 
 ### Workflow badge
 
-[![Scala CI](https://github.com/SteveMadoerin/minesweeper/actions/workflows/scala.yml/badge.svg)](https://github.com/SteveMadoerin/virtual/actions/workflows/scala.yml)
+[![Scala CI](https://github.com/eFabi11/minesweeper/actions/workflows/scala.yml/badge.svg)](https://github.com/eFabi11/minesweeper/actions/workflows/scala.yml)
