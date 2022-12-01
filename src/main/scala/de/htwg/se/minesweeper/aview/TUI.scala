@@ -26,7 +26,7 @@ class TUI(controller: Controller) extends Observer:
     //case Some(newfield) =>
       //println(newfield)
       //getInputAndPrintLoop(newfield)
-   
+  /* 
   def getInputAndPrintLoop(): Unit =
     analyseInput(readLine) match
       case None =>
@@ -34,7 +34,7 @@ class TUI(controller: Controller) extends Observer:
     getInputAndPrintLoop()
 
     // just put some comment in to test CI
-        
+    */    
         
         
   def analyseInput(input: String): Option[Move]=
